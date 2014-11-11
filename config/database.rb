@@ -36,18 +36,18 @@ SDB_NAME = APP_ROOT.join('db', APP_NAME + ".db" ).to_s
 #   to :development
 
 # POSTGRES USE
-# ActiveRecord::Base.establish_connection(
-#   :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-#   :host     => db.host,
-#   :port     => db.port,
-#   :username => db.user,
-#   :password => db.password,
-#   :database => DB_NAME,
-#   :encoding => 'utf8'
-# )
-
-# SQLITE 3 USE
 ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database  => SDB_NAME
+  :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+  :host     => db.host,
+  :port     => db.port,
+  :username => db.user,
+  :password => db.password,
+  :database => DB_NAME,
+  :encoding => 'utf8'
 )
+
+# # SQLITE 3 USE
+# ActiveRecord::Base.establish_connection(
+#   :adapter => "sqlite3",
+#   :database  => SDB_NAME
+# )
