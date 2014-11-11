@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>LOGIN</h1>
+  
+  <%= erb :_display_error %>
+
+  <form id="login" method="post" action="/login">
+    <label class="label" for="name">Name</label>
+    <input type="text" id="name" name="user[name]" placeholder="John Smith" value=""><br>
+    <label class="label" for="email">Email</label>
+    <input type="email" id ="email" name="user[email]" placeholder="e.g., me@example.com" value=""><br>
+    <label class="label" for="password">Password</label>
+    <input type="password" id = "password" name="user[password]" placeholder="Password"><br>
+    <div class="submit"><input type="submit" value="Sign In"></div>
+  </form>
+
+</div>
